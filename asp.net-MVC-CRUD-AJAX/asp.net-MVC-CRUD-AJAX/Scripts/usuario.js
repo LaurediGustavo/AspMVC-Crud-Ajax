@@ -3,6 +3,7 @@
 }); 
 
 function loadDados() {
+    $("#imgLoad").show();
     $.ajax({
         url: "Home/Get?nome=" + $('#txt_consulta').val(),
         type: "GET",
@@ -23,9 +24,11 @@ function loadDados() {
                 html += '<hr />';
             });
             $('#marIinfo').html(html);
+            $("#imgLoad").hide();
         },
         error: function () {
             alert('Erro ao buscar os usuários!');
+            $("#imgLoad").hide();
         }
     });
 }
@@ -54,6 +57,7 @@ function details(id) {
 }
 
 function add() {
+    $("#imgLoad").show();
     var res = validate();
     if (res == false) {
         return false;
@@ -77,11 +81,13 @@ function add() {
         },
         error: function () {
             alert('Erro no cadastro!');
+            $("#imgLoad").hide();
         }
     });
 }
 
 function update() {
+    $("#imgLoad").show();
     var res = validate();
     if (res == false) {
         return false;
@@ -106,9 +112,11 @@ function update() {
             $('#btnUpdate').hide();
 
             alert('Atualização Realizado!');
+            $("#imgLoad").hide();
         },
         error: function () {
             alert("Falha na atualização!");
+            $("#imgLoad").hide();
         }
     });
 }
@@ -117,6 +125,7 @@ function deletar(id) {
     var con = confirm("Deseja excluir?");
 
     if (con) {
+        $("#imgLoad").show();
         $.ajax({
             url: "Home/Delete/" + id,
             type: "POST",
@@ -127,6 +136,7 @@ function deletar(id) {
             },
             error: function () {
                 alert('Erro ao excluir o usuário!');
+                $("#imgLoad").hide();
             }
         });
     }

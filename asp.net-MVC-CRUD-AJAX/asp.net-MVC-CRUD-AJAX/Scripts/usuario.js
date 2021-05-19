@@ -4,7 +4,7 @@
 
 function loadDados() {
     $.ajax({
-        url: "Home/Get",
+        url: "Home/Get?nome=" + $('#txt_consulta').val(),
         type: "GET",
         contentType: "application/json;charset=utf-8",
         dataType: "json",

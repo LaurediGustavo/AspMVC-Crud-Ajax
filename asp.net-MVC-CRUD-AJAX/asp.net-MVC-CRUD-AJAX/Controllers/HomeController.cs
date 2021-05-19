@@ -19,9 +19,16 @@ namespace asp.net_MVC_CRUD_AJAX.Controllers
         }
 
         //GET : Usuarios
-        public JsonResult Get()
+        public JsonResult Get(string nome)
         {
-            return Json(context.Usuarios.OrderByDescending(u => u.Id).ToList(), JsonRequestBehavior.AllowGet);
+            var usuario = context.Usuarios.OrderByDescending(u => u.Id).ToList();
+
+            if (!String.IsNullOrEmpty(nome))
+            {
+                usuario = usuario.Where(u => u.Nome.Contains(nome)).ToList();
+            }
+
+            return Json(usuario, JsonRequestBehavior.AllowGet);
         }
 
         // GET: Usuario/Details/id

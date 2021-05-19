@@ -3,9 +3,25 @@
     height: 200px;
     padding-right: 10px;
     padding-left: 10px;
-    padding-top: 10px;
+    padding-top: 0px;
     padding-bottom: 10px;
+}
+
+.box {
+    width: 100%;
+    background-color: #eeeeee;
+    height: 60px;
+    padding: 10px;
+}
+
+#marIinfo {
+    height: 130px;
     overflow-x: auto;
+}
+
+#marIinfo hr {
+    border-color: gray;
+    width: 90%;
 }
 
 #marII {
@@ -46,6 +62,15 @@
     #marI, #marII {
         width: 49%;
         height: 400px;
+    }
+
+    #marIinfo {
+        height: 330px;
+    }
+
+    #marIinfo hr {
+        border-color: gray;
+        width: 90%;
     }
 
     #marII {

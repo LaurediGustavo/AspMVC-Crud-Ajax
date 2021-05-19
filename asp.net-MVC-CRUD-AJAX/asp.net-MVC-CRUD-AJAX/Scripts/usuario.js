@@ -22,7 +22,7 @@ function loadDados() {
                 html += '</div>';
                 html += '<hr />';
             });
-            $('#marI').html(html);
+            $('#marIinfo').html(html);
         },
         error: function () {
             alert('Erro ao buscar os usuários!');

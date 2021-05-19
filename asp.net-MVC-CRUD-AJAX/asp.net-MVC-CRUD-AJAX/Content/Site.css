@@ -1,0 +1,56 @@
+﻿#marI {
+    margin-top: 70px;
+    height: 200px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    overflow-x: auto;
+}
+
+#marII {
+    height: auto;
+}
+
+.info {
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+.info #divI {
+    width: 70%;
+}
+
+.info #divII {
+    width: 30%;
+    padding-top: 15px;
+    font-size: 0.8em;
+    text-align: right;
+}
+
+.info p {
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.info p span {
+    font-weight: normal;
+}
+
+@media screen and (min-width: 600px) {
+    .body-content {
+        display: flex;
+    }
+
+    #marI, #marII {
+        width: 49%;
+        height: 400px;
+    }
+
+    #marII {
+        margin-top: 70px;
+        margin-left: 2%;
+        height: 400px;
+    }
+}

@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<div id="marI" class="jumbotron">
+    
+    @*<div class="info">
+        <div id="divI">
+            <p>Nome: <span>Lauredi Gustavo Cappellari</span></p>
+            <p>E-mail: <span>Lauredi.g.c.rigoni@gmail.com</span></p>
+        </div>
+        <div id="divII">
+            <a href="#">Editar</a> | <a href="#">Excluir</a>
+        </div>
+    </div>
+    <hr />*@
+
+</div>
+
+<div id="marII" class="jumbotron">
+    <form>
+        <div class="form-group">
+            <label for="IdUsu">ID</label>
+            <input type="text" class="form-control" id="IdUsu" placeholder="Id" disabled="disabled" />
+        </div>
+        <div class="form-group">
+            <label for="Nome">Nome: </label>
+            <input type="text" class="form-control" id="Nome" placeholder="Nome" />
+        </div>
+        <div class="form-group">
+            <label for="Email">E-mail: </label>
+            <input type="text" class="form-control" id="Email" placeholder="E-mail" />
+        </div>
+        <button type="button" class="btn btn-primary center-block" id="btnAdd" onclick="return add();">Adicionar</button>
+        <button type="button" class="btn btn-primary center-block" style="display:none;" id="btnUpdate" onclick="return update();">Atualizar</button>
+    </form>
+</div>

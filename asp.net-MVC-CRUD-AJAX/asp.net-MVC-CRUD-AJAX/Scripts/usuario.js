@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
     loadDados();
-}); 
+});
 
 function loadDados() {
     $("#imgLoad").show();
@@ -57,7 +57,6 @@ function details(id) {
 }
 
 function add() {
-    $("#imgLoad").show();
     var res = validate();
     if (res == false) {
         return false;
@@ -81,13 +80,11 @@ function add() {
         },
         error: function () {
             alert('Erro no cadastro!');
-            $("#imgLoad").hide();
         }
     });
 }
 
 function update() {
-    $("#imgLoad").show();
     var res = validate();
     if (res == false) {
         return false;
@@ -112,11 +109,9 @@ function update() {
             $('#btnUpdate').hide();
 
             alert('Atualização Realizado!');
-            $("#imgLoad").hide();
         },
         error: function () {
             alert("Falha na atualização!");
-            $("#imgLoad").hide();
         }
     });
 }
@@ -133,6 +128,7 @@ function deletar(id) {
             dataType: "json",
             success: function (result) {
                 loadDados();
+                clear();
             },
             error: function () {
                 alert('Erro ao excluir o usuário!');
@@ -164,5 +160,8 @@ function validate() {
 function clear() {
     $('#IdUsu').val("");
     $('#Nome').val("");
-    $('#Email').val("");  
+    $('#Email').val("");
+
+    $('#btnAdd').show();
+    $('#btnUpdate').hide();
 }

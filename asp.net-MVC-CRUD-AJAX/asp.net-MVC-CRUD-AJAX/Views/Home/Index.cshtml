@@ -27,18 +27,18 @@
 </div>
 
 <div id="marII" class="jumbotron">
-    <form>
+    <form id="form">
         <div class="form-group">
             <label for="IdUsu">ID</label>
             <input type="text" class="form-control" id="IdUsu" placeholder="Id" disabled="disabled" />
         </div>
         <div class="form-group">
             <label for="Nome">Nome: </label>
-            <input type="text" class="form-control" id="Nome" placeholder="Nome" />
+            <input type="text" class="form-control" id="Nome" placeholder="Nome" maxlength="50" />
         </div>
         <div class="form-group">
             <label for="Email">E-mail: </label>
-            <input type="text" class="form-control" id="Email" placeholder="E-mail" />
+            <input type="email" class="form-control" id="Email" placeholder="E-mail" maxlength="50" />
         </div>
         <button type="button" class="btn btn-primary center-block" id="btnAdd" onclick="return add();">Adicionar</button>
         <button type="button" class="btn btn-primary center-block" style="display:none;" id="btnUpdate" onclick="return update();">Atualizar</button>
